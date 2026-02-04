@@ -1,0 +1,6 @@
+/* Mobile (Portrait)	Up to 480px	 */
+@media (max-width: 480px) { 
+    .card-container {
+        margin: 0 1rem;
+    }
+}
