@@ -18,7 +18,7 @@ body {
     justify-content: center;
 }
 
-#main {
+form {
     background-color: #11111144;
     padding: 1.5rem;
     border-radius: 10px;
@@ -61,6 +61,7 @@ input[type=text]:focus {
     border-radius: 4px;
     margin-left: 10%;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 
@@ -80,6 +81,7 @@ input[type=text]:focus {
     border-radius: 1rem;
     color: white;
     box-shadow: 0 0 10px #000000a3;
+    border: 1.5px solid rgba(255, 255, 255, 0.192);
 }
 
 .img-div {
