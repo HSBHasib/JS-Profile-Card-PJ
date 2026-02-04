@@ -11,12 +11,16 @@ let img = document.createElement("img");
 let h3 = document.createElement("h3");
 let h4 = document.createElement("h4");
 let p = document.createElement("p");
+let iconDiv = document.createElement("div");
+let icon = document.createElement("div");
 
 
+// Add classes
 cardContent.classList.add("card-container");
 card.classList.add("card");
 imgDiv.classList.add("img-div");
-
+icon.classList.add("fa-solid", "fa-xmark");
+iconDiv.classList.add("iconDiv");
 
 
 
@@ -27,11 +31,18 @@ form.addEventListener("submit", function(evt) {
     h3.textContent = evt.target[1].value;
     h4.textContent = evt.target[2].value;
     p.textContent = evt.target[3].value;
-    
+
+        
     document.querySelector(".allContent").append(cardContent);
     cardContent.append(card);
     card.append(imgDiv, h3, h4, p);
     imgDiv.append(img);
+    card.append(iconDiv);
+    iconDiv.append(icon);
+
+    iconDiv.addEventListener("click", function() {
+        cardContent.remove();
+    });
 
     form.reset();
 });
