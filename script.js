@@ -26,6 +26,24 @@ iconDiv.classList.add("iconDiv");
 
 form.addEventListener("submit", function(evt) {
     evt.preventDefault();
+
+
+    for(let i=0; i<4; i++) {
+        if(evt.target[i].value === "") {
+            alert(`Please full fill the ${input[i].getAttribute('placeholder')} input box`);
+            return;
+        }
+    }
+
+    //  for(let i=0; i < 4; i++) { // inputs usually 4ta thake (img, h3, h4, p)
+    //     if(evt.target[i].value === "") {
+    //         // input[i] use koro placeholder paitay
+    //         alert(`Please fill the ${input[i].getAttribute('placeholder')} input box`);
+    //         return;
+    //     }
+    // }
+
+    console.dir(evt.target[1]);
     
     img.setAttribute("src", evt.target[0].value);
     h3.textContent = evt.target[1].value;
@@ -39,6 +57,7 @@ form.addEventListener("submit", function(evt) {
     imgDiv.append(img);
     card.append(iconDiv);
     iconDiv.append(icon);
+
 
     iconDiv.addEventListener("click", function() {
         cardContent.remove();

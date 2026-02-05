@@ -38,7 +38,7 @@ input {
 }
 
 input[type="text"] {
-    background: rgba(245, 245, 245, 0.167);
+    background-color: rgba(245, 245, 245, 0.167);
     color: #ffffffbb;
     padding: 0.3rem 0.5rem;
     width: 15.625rem;
@@ -59,7 +59,7 @@ input[type=text]:focus {
 }
 
 .btn {
-    background: rgba(245, 245, 245, 0.555);
+    background-color: rgba(245, 245, 245, 0.555);
     color: #ffffffbb;
     width: 200px;
     padding: 0.3rem 0.5rem;
@@ -71,6 +71,18 @@ input[type=text]:focus {
 }
 
 
+
+/* Autofill bg color set */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #4a4a4a inset !important; 
+     
+    -webkit-text-fill-color: #ffffffbb !important; 
+    
+    transition: background-color 5000s ease-in-out 0s;
+}
 
 
 /* Card Design */
